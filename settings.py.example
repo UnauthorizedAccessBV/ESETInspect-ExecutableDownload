@@ -1,0 +1,6 @@
+USERNAME = ""
+PASSWORD = ""
+DOMAIN = True
+URL = ""
+VERIFY = True
+CLIENT_ID = ""
