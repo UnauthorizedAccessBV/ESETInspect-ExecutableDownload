@@ -309,9 +309,8 @@ class EsetInspect:
                     f"Found file {filename} ({module_id}) on machine {download_status.currentMachine}"
                 )
 
-                downloaded_file = await self._raw_request(
-                    f"download/{file_info.uuid}/{filename.stem}.zip"
-                )
+                uri = urljoin("/download/", f"{file_info.uuid}/{filename.stem}.zip")
+                downloaded_file = await self._raw_request(uri)
 
                 download_path = Path(
                     output_directory, f"{filename}_{module_id}_({file_info.password}).zip"
